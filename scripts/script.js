@@ -6,6 +6,7 @@ const cart = document.querySelector(".product-cart");
 const sections = document.querySelectorAll(".products");
 const itemInfo = document.querySelector(".item-info");
 const cartTotal = document.querySelector(".product-cart p");
+const back = document.querySelector(".go-back");
 
 // Event listeners
 const indexScriptCode  = () => {
