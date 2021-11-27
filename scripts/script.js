@@ -42,6 +42,9 @@ const productScriptCode  = () => {
 
 const infoScriptCode = () => {
     showInfo();
+    back.addEventListener("click", () => {
+        removeInfoFromLocalstorage();
+    });
 }
 
 // run while I'm in the index file : don't run
