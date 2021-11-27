@@ -294,10 +294,14 @@ function showInfo(e) {
                 </div>
             `;
             itemInfo.innerHTML = html;
-            localStorage.removeItem("info");
+            // localStorage.removeItem("info");
         });
     }
     changeItemimage();
+}
+
+function removeInfoFromLocalstorage() {
+    localStorage.removeItem("info");
 }
 
 function changeItemimage() {
