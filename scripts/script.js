@@ -7,7 +7,7 @@ const sections = document.querySelectorAll(".products");
 const itemInfo = document.querySelector(".item-info");
 const cartTotal = document.querySelector(".product-cart p");
 
-// Event listeners and shits\
+// Event listeners
 const indexScriptCode  = () => {
     reviewCards.forEach(card => {
         card.addEventListener("mouseenter", (e) => {
