@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Parabot products</title>
+</head>
+<body id="product">
+    <header class="container">
+        <h3> <a href="/"> Our product</a></h3>
+        <div>
+            <button class="product-cart"><img src="./icon/cart.svg" alt="">
+            <p>0</p>
+            </button>
+            <button class="product-search"><img src="./icon/search.svg" alt=""></button>
+        </div>
+
+        <div class="cart-item-container"></div>
+    </header>
+    <section class="container tabs">
+        <ul class="product-list">
+            <li class="trigger active" data-target="#chair">Chair</li></button>
+            <li class="trigger" data-target="#sofas">Sofas</li>
+            <li class="trigger" data-target="#bed">Bed</li>
+            <li class="trigger" data-target="#tables">Tables</li>
+        </ul>
+        <div id="chair" class="products active"></div>
+        <div id="sofas" class="products"></div>
+        <div id="bed" class="products">
+            <div>
+                <h3>Out of stock...</h3>
+                <h3>Check back later</h3>
+            </div>
+        </div>
+        <div id="tables" class="products"></div>
+
+        <script src="./scripts/fetch.js"></script>
+        <script src="./scripts/script.js"></script>
+    </section>
+</body>
+</html>
