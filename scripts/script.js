@@ -221,24 +221,6 @@ function addItemToLocalstorage(e){
     }
 }
 
-// function removeFromCart (e) {
-//     if(e.target.classList.contains("trash-button")){
-//         if(localStorage.getItem("products") !== null) {
-//             let products = JSON.parse(localStorage.getItem("products"));
-//             let itemName = e.target.previousElementSibling.children[0];
-//             let newProducts = products.filter(product => product.name !== itemName.textContent);
-//             localStorage.setItem("newProducts", JSON.stringify(newProducts));
-//             // location.reload();
-//             localStorage.removeItem("products");
-//             // localStorage.removeItem("newProducts");
-//             //
-//             // const getNewProduct = JSON.parse(localStorage.getItem("newProducts"));
-//             // console.log(getNewProduct);
-//             location.reload();
-//         }
-//     }
-// }
-
 function removeLocalItems (e) {
     if(e.target.classList.contains("trash-button")){
         let products = [];
@@ -250,8 +232,9 @@ function removeLocalItems (e) {
         const productIdex = e.target.parentElement.children[1].children[0].innerText;
         products.splice(products.indexOf(productIdex));
         localStorage.setItem("products", JSON.stringify(products));
-        //reload
-        location.reload();
+
+        //remove item from dom
+        e.target.parentElement.remove();
     }
 }
 
