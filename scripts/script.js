@@ -26,11 +26,9 @@ const productScriptCode  = () => {
     productItem.addEventListener("click", (e) => {
         addItemToLocalstorage(e);
         addToCart(e);
-        removeFromCart(e);
         getInfo(e);
     });
     cartItemContainer.addEventListener("click", (e) => {
-        removeFromCart(e);
     });
     cart.addEventListener("click", () => {
         cartItemContainer.classList.toggle('active');
@@ -198,7 +196,7 @@ function addToCart(e){
     //         cartBtn.appendChild(cart);
     //         cartItemContainer.prepend(cartDiv);
     //     });
-    //}
+    // }
 }
 
 function addItemToLocalstorage(e){
@@ -218,27 +216,31 @@ function addItemToLocalstorage(e){
             products = JSON.parse(localStorage.getItem("products"));
         }
         products.push({src, name, price});
-        // increase id up one
-        localStorage.setItem("products", JSON.stringify(products));
-        location.reload();        
+        localStorage.setItem("products", JSON.stringify(products));      
     }
 }
 
-function removeFromCart (e) {
+// function removeFromCart (e) {
+//     if(e.target.classList.contains("trash-button")){
+//         if(localStorage.getItem("products") !== null) {
+//             let products = JSON.parse(localStorage.getItem("products"));
+//             let itemName = e.target.previousElementSibling.children[0];
+//             let newProducts = products.filter(product => product.name !== itemName.textContent);
+//             localStorage.setItem("newProducts", JSON.stringify(newProducts));
+//             // location.reload();
+//             localStorage.removeItem("products");
+//             // localStorage.removeItem("newProducts");
+//             //
+//             // const getNewProduct = JSON.parse(localStorage.getItem("newProducts"));
+//             // console.log(getNewProduct);
+//             location.reload();
+//         }
+//     }
+// }
+
+function removeLocalItmes (e) {
     if(e.target.classList.contains("trash-button")){
-        if(localStorage.getItem("products") !== null) {
-            let products = JSON.parse(localStorage.getItem("products"));
-            let itemName = e.target.previousElementSibling.children[0];
-            let newProducts = products.filter(product => product.name !== itemName.textContent);
-            localStorage.setItem("newProducts", JSON.stringify(newProducts));
-            // location.reload();
-            localStorage.removeItem("products");
-            // localStorage.removeItem("newProducts");
-            //
-            // const getNewProduct = JSON.parse(localStorage.getItem("newProducts"));
-            // console.log(getNewProduct);
-            location.reload();
-        }
+        
     }
 }
 
