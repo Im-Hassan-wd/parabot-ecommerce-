@@ -29,6 +29,7 @@ const productScriptCode  = () => {
         getInfo(e);
     });
     cartItemContainer.addEventListener("click", (e) => {
+        removeLocalItems(e);
     });
     cart.addEventListener("click", () => {
         cartItemContainer.classList.toggle('active');
@@ -238,9 +239,19 @@ function addItemToLocalstorage(e){
 //     }
 // }
 
-function removeLocalItmes (e) {
+function removeLocalItems (e) {
     if(e.target.classList.contains("trash-button")){
-        
+        let products = [];
+        if (localStorage.getItem("products") === null) {
+            products = [];
+        } else {
+            products = JSON.parse(localStorage.getItem("products"));
+        }
+        const productIdex = e.target.parentElement.children[1].children[0].innerText;
+        products.splice(products.indexOf(productIdex));
+        localStorage.setItem("products", JSON.stringify(products));
+        //reload
+        location.reload();
     }
 }
 
