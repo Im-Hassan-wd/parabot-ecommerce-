@@ -542,7 +542,6 @@ footer .container {
   right: 5%;
   top: 10%;
   z-index: 2;
-  /* background: #fff; */
   overflow-y: scroll;
   border-radius: 10px;
   opacity: 0;
@@ -596,6 +595,13 @@ footer .container {
   position: absolute;
   right: 5%;
   cursor: pointer;
+}
+
+/* cart item animation */
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  transition: 1.5s ease;
+  opacity: 0;
 }
 
 .cart-item .item-name {

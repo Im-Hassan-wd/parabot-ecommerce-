@@ -22,7 +22,7 @@ const indexScriptCode  = () => {
 
 const productScriptCode  = () => {
     products();
-    getNumberOfItemsInthecart();
+    itemsIncart();
     productItem.addEventListener("click", (e) => {
         addItemToLocalstorage(e);
         addToCart(e);
@@ -157,7 +157,6 @@ function addToCart(e){
             cart.classList.add("item-cart");
             cartBtn.appendChild(cart);
             cartItemContainer.prepend(cartDiv);
-            //reload page
         });
     }
 }
@@ -180,8 +179,9 @@ function addItemToLocalstorage(e){
         }
         products.push({src, name, price});
         localStorage.setItem("products", JSON.stringify(products));
-        //
-        cartTotal.textContent = JSON.parse(localStorage.getItem("products")).length;     
+        
+        //length of item in cart
+        itemsIncart();    
     }
 }
 
@@ -197,10 +197,15 @@ function removeLocalItems (e) {
         products.splice(products.indexOf(productIdex));
         localStorage.setItem("products", JSON.stringify(products));
 
-        //remove item from dom
-        e.target.parentElement.remove();
-        //
-        cartTotal.textContent = JSON.parse(localStorage.getItem("products")).length;
+        //remove item from dom & animation
+        const cartItem = e.target.parentElement;
+        cartItem.classList.add("fall");
+        cartItem.addEventListener("transitionend", function(){
+          cartItem.remove();
+        });
+
+        //length of item in cart
+        itemsIncart();
     }
 }
 
@@ -223,7 +228,7 @@ async function getInfo(e){
     }
 }
 
-function getNumberOfItemsInthecart () {
+function itemsIncart() {
     if(localStorage.getItem("products")) {
         cartTotal.textContent = JSON.parse(localStorage.getItem("products")).length;
     } else if (localStorage.getItem("newProducts")){
@@ -259,7 +264,6 @@ function showInfo(e) {
                 </div>
             `;
             itemInfo.innerHTML = html;
-            // localStorage.removeItem("info");
         });
     }
     changeItemimage();
