@@ -161,47 +161,47 @@ function addToCart(e){
             //reload page
         });
     }
-    if(localStorage.getItem("newProducts") !== null) {
-        const newProducts = JSON.parse(localStorage.getItem("newProducts"));
-        // cart.textContent = newProducts.length;
-        newProducts.forEach(product => {
-            //
-            const cartDiv = document.createElement("div");
-            cartDiv.classList.add("cart-item");
-            //
-            const itemImg = document.createElement("img");
-            itemImg.src = product.src;
-            itemImg.classList.add("cart-item-img");
-            cartDiv.appendChild(itemImg);
-            //
-            const itemDesc = document.createElement("div");
-            cartDiv.appendChild(itemDesc);
-            //
-            const itemName = document.createElement("h4");
-            itemName.classList.add("item-name");
-            itemName.textContent = product.name;
-            itemDesc.appendChild(itemName);
-            //
-            const itemPrice = document.createElement("h4");
-            itemPrice.classList.add("item-name");
-            itemPrice.textContent = product.price;
-            itemDesc.appendChild(itemPrice);
-            //
-            const cartBtn = document.createElement("button");
-            cartBtn.classList.add("trash-button");
-            cartDiv.appendChild(cartBtn);
-            //
-            const cart = document.createElement("img");
-            cart.src = "./icon/trash.svg";
-            cart.alt = "add to cart";
-            cart.classList.add("item-cart");
-            cartBtn.appendChild(cart);
-            cartItemContainer.prepend(cartDiv);
-        });
-    }
+    // if(localStorage.getItem("newProducts") !== null) {
+    //     const newProducts = JSON.parse(localStorage.getItem("newProducts"));
+    //     // cart.textContent = newProducts.length;
+    //     newProducts.forEach(product => {
+    //         //
+    //         const cartDiv = document.createElement("div");
+    //         cartDiv.classList.add("cart-item");
+    //         //
+    //         const itemImg = document.createElement("img");
+    //         itemImg.src = product.src;
+    //         itemImg.classList.add("cart-item-img");
+    //         cartDiv.appendChild(itemImg);
+    //         //
+    //         const itemDesc = document.createElement("div");
+    //         cartDiv.appendChild(itemDesc);
+    //         //
+    //         const itemName = document.createElement("h4");
+    //         itemName.classList.add("item-name");
+    //         itemName.textContent = product.name;
+    //         itemDesc.appendChild(itemName);
+    //         //
+    //         const itemPrice = document.createElement("h4");
+    //         itemPrice.classList.add("item-name");
+    //         itemPrice.textContent = product.price;
+    //         itemDesc.appendChild(itemPrice);
+    //         //
+    //         const cartBtn = document.createElement("button");
+    //         cartBtn.classList.add("trash-button");
+    //         cartDiv.appendChild(cartBtn);
+    //         //
+    //         const cart = document.createElement("img");
+    //         cart.src = "./icon/trash.svg";
+    //         cart.alt = "add to cart";
+    //         cart.classList.add("item-cart");
+    //         cartBtn.appendChild(cart);
+    //         cartItemContainer.prepend(cartDiv);
+    //     });
+    //}
 }
 
-function addItemToLocalstorage(e, id){
+function addItemToLocalstorage(e){
     if(e.target.classList.contains("cart-button")){
         //item img
         const src = e.target.parentElement.children[0].src;
