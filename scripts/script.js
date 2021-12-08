@@ -22,7 +22,7 @@ const indexScriptCode  = () => {
 
 const productScriptCode  = () => {
     products();
-    getCartTotal();
+    getNumberOfItemsInthecart();
     productItem.addEventListener("click", (e) => {
         addItemToLocalstorage(e);
         addToCart(e);
@@ -179,7 +179,9 @@ function addItemToLocalstorage(e){
             products = JSON.parse(localStorage.getItem("products"));
         }
         products.push({src, name, price});
-        localStorage.setItem("products", JSON.stringify(products));      
+        localStorage.setItem("products", JSON.stringify(products));
+        //
+        cartTotal.textContent = JSON.parse(localStorage.getItem("products")).length;     
     }
 }
 
@@ -197,6 +199,8 @@ function removeLocalItems (e) {
 
         //remove item from dom
         e.target.parentElement.remove();
+        //
+        cartTotal.textContent = JSON.parse(localStorage.getItem("products")).length;
     }
 }
 
@@ -213,14 +217,13 @@ async function getInfo(e){
                     info = JSON.parse(localStorage.getItem("info"));
                 }
                 info.push(product);
-                // increase id up one
                 localStorage.setItem("info", JSON.stringify(info));
             }
         });
     }
 }
 
-function getCartTotal () {
+function getNumberOfItemsInthecart () {
     if(localStorage.getItem("products")) {
         cartTotal.textContent = JSON.parse(localStorage.getItem("products")).length;
     } else if (localStorage.getItem("newProducts")){
