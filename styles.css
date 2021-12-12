@@ -862,6 +862,7 @@ section.item-info {
 }
 
 .checkout-button {
+  text-decoration: none;
   position: fixed;
   bottom: 0%;
   right: 0%;
