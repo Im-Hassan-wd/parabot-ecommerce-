@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./styles.css">
+    <title>Checkout</title>
+</head>
+<body>
+    <header class="container">
+        <h1>Checkout</h1>
+    </header>
+    <main class="container checkout-page">
+        <section class="information">
+            <div class="contact-information">
+                <h3>Contact information</h3>
+
+                <form class="form">
+                    <div>
+                        <label for="email">E-mail</label>
+                        <div class="input">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" placeholder="Enter your email...">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="phone">Phone</label>
+                        <div class="input">
+                            <i class="fas fa-phone"></i>
+                            <input type="tel" id="phone" placeholder="Enter your phone...">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="shipping-address">
+                <h3>Shipping address</h3>
+                <form class="form">
+                    <div>
+                        <label for="full-name">Full name</label>
+                        <div class="input">
+                            <i class="fas fa-user-alt"></i>
+                            <input type="text" id="full-name" placeholder="Your name...">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="address">Address</label>
+                        <div class="input">
+                            <i class="fas fa-home"></i>
+                            <input type="text" id="address" placeholder="Your address...">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="city">City</label>
+                        <div class="input">
+                            <i class="fas fa-city"></i>
+                            <input type="text" id="city" placeholder="Your address...">
+                        </div>
+                    </div>
+                    <div class="location">
+                        <div class="div">
+                            <label for="country">Country</label>
+                            <div class="input">
+                                <i class="fas fa-globe-asia"></i>
+                                <input type="text" id="country" placeholder="Your country...">
+                            </div>
+                        </div>
+                        <div class="div">
+                            <label for="postal-card">Postal card</label>
+                            <div class="input">
+                                <i class="far fa-building"></i>
+                                <input type="text" id="postal-card" placeholder="Your postal card...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="checkbox" id="checkbox">
+                        <p>save this information for next time</p>
+                    </div>
+                    <button class="form-btn">Continue</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="checkout-list">
+            <div class="item">
+                <img src="./sofas/1.png" alt="">
+                <div class="details">
+                    <div>
+                        <h4 class="item-name">Home Decor</h4>
+                        <div class="item-price">
+                            <p class="new-price price">$134.99</p>
+                            <p class="old-price price">$174.99</p>
+                        </div>
+                    </div>
+                    <div class="quantity">
+                        <button>+</button>
+                        <p>1</p>
+                        <button>-</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./chair/8blue.png" alt="">
+                <div class="details">
+                    <div>
+                        <h4 class="item-name">Augustine Swivel </h4>
+                        <div class="item-price">
+                            <p class="new-price price">$74.99</p>
+                            <p class="old-price price">$124.99</p>
+                        </div>
+                    </div>
+                    <div class="quantity">
+                        <button>+</button>
+                        <p>1</p>
+                        <button>-</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shipping-section">
+                <div>
+                    <div class="shipping">
+                        <h4>Shipping</h4>
+                        <h4>$19</h4>
+                    </div>
+                    <div class="total">
+                        <h4>Total</h4>
+                        <h4>$148.98</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
