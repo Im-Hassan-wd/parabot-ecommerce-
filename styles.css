@@ -868,6 +868,11 @@ section.item-info {
   right: 0%;
   background: #35354e;
   color: #fff;
+  width: 80px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 634px) {
