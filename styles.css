@@ -861,6 +861,14 @@ section.item-info {
   background: #cda501;
 }
 
+.checkout-button {
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+  background: #35354e;
+  color: #fff;
+}
+
 @media (max-width: 634px) {
   section.item-info {
     flex-direction: column;
