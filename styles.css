@@ -951,7 +951,7 @@ form p {
   font-size: 0.7rem;
 }
 
-input {
+div input {
   width: 300px;
   height: 38px;
   border: none;
