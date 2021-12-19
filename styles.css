@@ -932,26 +932,26 @@ main.checkout-page {
   flex-direction: column;
 }
 
-form {
+.shipping-address form {
   margin-top: 15px;
 }
 
-form div {
+.shipping-address form div {
   margin: 5px 0;
 }
 
-form label {
+.shipping-address form label {
   margin: 5px 0;
   color: #4f4f4f;
   font-size: 0.82rem;
   display: block;
 }
 
-form p {
+.shipping-address form p {
   font-size: 0.7rem;
 }
 
-div input {
+.shipping-address input {
   width: 300px;
   height: 38px;
   border: none;
@@ -960,7 +960,7 @@ div input {
   background: #f5f5f5;
 }
 
-div.input {
+.shipping-address div.input {
   display: flex;
   align-items: center;
   max-width: 380px;
@@ -970,7 +970,7 @@ div.input {
   outline-color: #828282;
 }
 
-.input i {
+.shipping-address .input i {
   margin: 0 10px;
   color: #828282;
 }
@@ -1016,7 +1016,6 @@ i.fa-phone {
 }
 
 .checkout-list {
-  /* margin-left: 70px; */
   max-width: 355px;
   background: #f2f2f2;
   border-radius: 12px;
