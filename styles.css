@@ -932,22 +932,26 @@ main.checkout-page {
   flex-direction: column;
 }
 
-.shipping-address form {
+.shipping-address form,
+.contact-information form {
   margin-top: 15px;
 }
 
-.shipping-address form div {
+.shipping-address form div,
+.contact-information form div {
   margin: 5px 0;
 }
 
-.shipping-address form label {
+.shipping-address form label,
+.contact-information form label {
   margin: 5px 0;
   color: #4f4f4f;
   font-size: 0.82rem;
   display: block;
 }
 
-.shipping-address form p {
+.shipping-address form p,
+.contact-information form p {
   font-size: 0.7rem;
 }
 
