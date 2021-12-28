@@ -7,7 +7,7 @@ const sections = document.querySelectorAll(".products");
 const itemInfo = document.querySelector(".item-info");
 const cartTotal = document.querySelector(".product-cart p");
 const back = document.querySelector(".go-back");
-const checkout = document.querySelector("checkout-list");
+const checkoutItems = document.querySelector(".checkout-list .items");
 
 // Event listeners
 const indexScriptCode  = () => {
@@ -60,6 +60,9 @@ if (document.body.id.includes("product")) {
 }
 if (document.body.id.includes("info")) {
     infoScriptCode();
+}
+if (document.body.id.includes("checkout")) {
+    checkoutScriptCode();
 }
 
 async function products() {
@@ -170,13 +173,10 @@ function checkoutList (){
     if(localStorage.getItem("products") !== null) {
         const products = JSON.parse(localStorage.getItem("products"));
         products.forEach(product => {
-            //ckeckout div
-            const itemsDiv = document.createElement("div");
-            checkout.append(itemsDiv);
             //item div
             const itemDiv = document.createElement("div");
             itemDiv.classList.add("item");
-            itemsDiv.prepend(itemDiv);
+            checkoutItems.prepend(itemDiv);
             //
             const image = document.createElement("img");
             image.src = product.src;
@@ -206,7 +206,7 @@ function checkoutList (){
             //
             const oldPrice = document.createElement("p");
             oldPrice.classList.add("old-price");
-            oldPrice.textContent = "$174.99";
+            oldPrice.textContent = "$335.99";
             prices.append(oldPrice);
             //
             const quantityDiv = document.createElement("div");
@@ -216,6 +216,10 @@ function checkoutList (){
             const upOne = document.createElement("button");
             upOne.textContent = "+";
             quantityDiv.append(upOne);
+            //
+            const count = document.createElement("p");
+            count.textContent = '1';
+            quantityDiv.append(count);
             //
             const downOne = document.createElement("button");
             downOne.textContent = "-";
