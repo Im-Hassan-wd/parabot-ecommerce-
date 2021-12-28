@@ -215,15 +215,23 @@ function checkoutList (){
             //
             const upOne = document.createElement("button");
             upOne.textContent = "+";
+            upOne.style.cursor = "pointer";
             quantityDiv.append(upOne);
             //
             const count = document.createElement("p");
             count.textContent = '1';
             quantityDiv.append(count);
+            upOne.addEventListener("click", () => count.textContent ++ );
             //
             const downOne = document.createElement("button");
             downOne.textContent = "-";
+            downOne.style.cursor = "pointer";
             quantityDiv.append(downOne);
+            downOne.addEventListener("click", () => count.textContent -- );
+            //ckecking
+            if (upOne.textContent === 1){
+                upOne.textContent = 1;
+            }
         });
     }
 }
