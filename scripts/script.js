@@ -47,6 +47,10 @@ const infoScriptCode = () => {
     });
 }
 
+const checkoutScriptCode = () => {
+    checkoutList();
+}
+
 // run while I'm in the index file : don't run
 if (document.body.id.includes("index")) {
     indexScriptCode();
@@ -177,6 +181,45 @@ function checkoutList (){
             const image = document.createElement("img");
             image.src = product.src;
             image.alt = product.name;
+            itemDiv.append(image);
+            //
+            const detailsDiv = document.createElement("div");
+            detailsDiv.classList.add("details");
+            itemDiv.append(detailsDiv);
+            //
+            const div = document.createElement("div");
+            detailsDiv.append(div);
+            //
+            const itemName = document.createElement("h4");
+            itemName.classList.add("item-name");
+            itemName.textContent = product.name;
+            div.append(itemName);
+            //
+            const prices = document.createElement("div");
+            prices.classList.add("item-price");
+            div.append(prices);
+            //
+            const newPrice = document.createElement("p");
+            newPrice.classList.add("new-price");
+            newPrice.textContent = product.price;
+            prices.append(newPrice);
+            //
+            const oldPrice = document.createElement("p");
+            oldPrice.classList.add("old-price");
+            oldPrice.textContent = "$174.99";
+            prices.append(oldPrice);
+            //
+            const quantityDiv = document.createElement("div");
+            quantityDiv.classList.add("quantity");
+            detailsDiv.append(quantityDiv);
+            //
+            const upOne = document.createElement("button");
+            upOne.textContent = "+";
+            quantityDiv.append(upOne);
+            //
+            const downOne = document.createElement("button");
+            downOne.textContent = "-";
+            quantityDiv.append(downOne);
         });
     }
 }
