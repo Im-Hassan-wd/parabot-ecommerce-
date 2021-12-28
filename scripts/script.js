@@ -228,10 +228,6 @@ function checkoutList (){
             downOne.style.cursor = "pointer";
             quantityDiv.append(downOne);
             downOne.addEventListener("click", () => count.textContent -- );
-            //ckecking
-            if (upOne.textContent === 1){
-                upOne.textContent = 1;
-            }
         });
     }
 }
