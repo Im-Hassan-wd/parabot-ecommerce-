@@ -955,7 +955,8 @@ main.checkout-page {
   font-size: 0.7rem;
 }
 
-.shipping-address input {
+.shipping-address input,
+.contact-information input {
   width: 300px;
   height: 38px;
   border: none;
@@ -964,7 +965,8 @@ main.checkout-page {
   background: #f5f5f5;
 }
 
-.shipping-address div.input {
+.shipping-address div.input,
+.contact-information div.input {
   display: flex;
   align-items: center;
   max-width: 380px;
@@ -1024,7 +1026,6 @@ i.fa-phone {
   background: #f2f2f2;
   border-radius: 12px;
   height: 500px;
-  padding: 25px;
   margin-bottom: 30px;
   margin-top: 30px;
 }
@@ -1032,6 +1033,12 @@ i.fa-phone {
 .checkout-list img {
   width: 150px;
   border-radius: 12px;
+}
+
+.checkout-list .items {
+  padding: 25px;
+  overflow-y: scroll;
+  height: 450px;
 }
 
 .checkout-list .item,
