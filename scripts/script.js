@@ -7,6 +7,7 @@ const sections = document.querySelectorAll(".products");
 const itemInfo = document.querySelector(".item-info");
 const cartTotal = document.querySelector(".product-cart p");
 const back = document.querySelector(".go-back");
+const checkout = document.querySelector("checkout-list");
 
 // Event listeners
 const indexScriptCode  = () => {
@@ -157,6 +158,25 @@ function addToCart(e){
             cart.classList.add("item-cart");
             cartBtn.appendChild(cart);
             cartItemContainer.prepend(cartDiv);
+        });
+    }
+}
+
+function checkoutList (){
+    if(localStorage.getItem("products") !== null) {
+        const products = JSON.parse(localStorage.getItem("products"));
+        products.forEach(product => {
+            //ckeckout div
+            const itemsDiv = document.createElement("div");
+            checkout.append(itemsDiv);
+            //item div
+            const itemDiv = document.createElement("div");
+            itemDiv.classList.add("item");
+            itemsDiv.prepend(itemDiv);
+            //
+            const image = document.createElement("img");
+            image.src = product.src;
+            image.alt = product.name;
         });
     }
 }
