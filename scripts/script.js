@@ -8,6 +8,7 @@ const itemInfo = document.querySelector(".item-info");
 const cartTotal = document.querySelector(".product-cart p");
 const back = document.querySelector(".go-back");
 const checkoutItems = document.querySelector(".checkout-list .items");
+const infoCart = document.querySelector(".add-to-cart");
 
 // Event listeners
 const indexScriptCode  = () => {
@@ -40,11 +41,12 @@ const productScriptCode  = () => {
     addToCart();
 }
 
-const infoScriptCode = () => {
+const infoScriptCode = (e) => {
     showInfo();
     back.addEventListener("click", () => {
         removeInfoFromLocalstorage();
     });
+    addItemToLocalstorage(e);
 }
 
 const checkoutScriptCode = () => {
