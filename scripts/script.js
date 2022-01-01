@@ -63,6 +63,7 @@ if (document.body.id.includes("info")) {
 }
 if (document.body.id.includes("checkout")) {
     checkoutScriptCode();
+    calculate();
 }
 
 async function products() {
@@ -366,7 +367,7 @@ function changeItemimage() {
 
 // claculations and shit
 function calculate() {
-    
+    const items = document.querySelector(".items")
 }
 
 //prodduc tabs
