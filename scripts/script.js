@@ -364,6 +364,11 @@ function changeItemimage() {
     });
 }
 
+// claculations and shit
+function calculate() {
+    
+}
+
 //prodduc tabs
 
 function toogleTab() {
