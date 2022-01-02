@@ -367,9 +367,9 @@ function changeItemimage() {
 
 // claculations and shit
 function calculate() {
+    let allPrice = [];
     const prices = document.querySelectorAll(".new-price");
     for (let i = 0; i < prices.length; i++) {
-        console.log(prices[i].textContent[0] = '');
     }
 }
 
