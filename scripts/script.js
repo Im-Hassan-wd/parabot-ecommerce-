@@ -368,7 +368,9 @@ function changeItemimage() {
 // claculations and shit
 function calculate() {
     const prices = document.querySelectorAll(".new-price");
-    console.log(prices[0])
+    for (let i = 0; i < prices.length; i++) {
+        console.log(prices[i].textContent[0] = '');
+    }
 }
 
 //prodduc tabs
