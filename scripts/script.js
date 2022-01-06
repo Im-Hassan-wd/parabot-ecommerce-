@@ -365,14 +365,6 @@ function changeItemimage() {
     });
 }
 
-// claculations and shit
-function calculate() {
-    let allPrice = [];
-    const prices = document.querySelectorAll(".new-price");
-    for (let i = 0; i < prices.length; i++) {
-    }
-}
-
 //prodduc tabs
 
 function toogleTab() {
