@@ -13,7 +13,7 @@
 ## Table of Contents
 
 - [Overview](#overview)
-  - [Built With](#built-with)
+- [Built With](#built-with)
 - [Features](#features)
 - [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
@@ -23,6 +23,7 @@
 ## Overview
 
 ![screenshot](https://raw.githubusercontent.com/Im-Hassan-wd/sponge-s-portfolio/master/img/parabot.jpg)
+![screenshot](https://raw.githubusercontent.com/Im-Hassan-wd/parabot-ecommerce-/master/img/order%20mode%201.gif)
 
 Parabot Landing Page / E commerce shopping website(my idea)
 
